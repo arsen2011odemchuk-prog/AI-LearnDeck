@@ -6,15 +6,40 @@ Instead of forcing students to use slow virtual machines that crash or lag a sin
 
 ---
 
-## 📖 The Story & Philosophy: Why I Built This
+##  The Story & Philosophy: Why I Built This
 
 When learning server administration or network routing, students often face a wall of frustrating textbook theory. Running heavy educational scripts on a single micro-computer quickly bottlenecks the CPU, causing screen freezing and system crashes that disrupt the classroom flow. 
 
 I built the **AI-LearnDeck** to turn distributed computing into a tactile, physical experience. By decoupling the interface from the backend learning environment, a student can visually monitor real-time diagnostic packets on the top monitor while actively writing and interacting with custom coding tools on the lower touch panel. It is a miniature, fully independent data center that fits entirely in a backpack, built to teach how real-world cluster infrastructure handles resource scaling.
 
 ---
+### 📦 Diagram 1: Solderless Component Stacking Matrix (Component Placement)
 
-## 📐 Enclosure Mechanics & Geometric Engineering
+This structural block diagram details the physical placement and vertical stacking layers within the monolithic plate frame enclosure. It maps out how the power systems, compute nodes, and display units fit neatly side-by-side to establish a rugged, single-piece tablet with no moving parts. The main layout positions the integrated fast-charge power bank flat inside a central baseline cavity to provide a perfectly balanced, transport-ready counterweight for handheld operation.
+
+The processing hardware is split between distinct left and right compartments. To completely eliminate internal wire stress, the compute nodes are organized in an opposed-rotation layout, positioning their native network ports facing directly toward the center bulkhead on a straight line. The twin touchscreen display faceplates press directly down onto the physical processing headers, drawing their required electrical current natively through the pins to ensure the entire dual-monitor profile remains completely compact and securely anchored without loose interior overlapping.
+ 
+ <img width="560" height="420" alt="image" src="https://github.com/user-attachments/assets/3b4547c8-c247-43e0-8b01-94adaa3320a0" />
+---
+
+### 🔌 Diagram 2: Power Rails & Hardware Bridges (Electrical Connections)
+
+This wiring blueprint maps out the complete electrical connections, isolated power allocation paths, and data bridges running inside the hardware chassis. It provides a highly transparent, trace-level overview to verify that the entire system operates as a 100% solderless, plug-and-play constructor platform. The schematic paths track how the dual fast-charge power delivery streams route cleanly through vertical steering elbow adapters underneath the mounting plates, bypassing the sidewalls without any cable kinking.
+
+The data matrix highlights the hardwired, zero-leak network bridge linking the two computing units across the central partition. By locking the network ports on a straight horizontal axis, the flat copper patch cable connects the nodes in a perfectly straight line with a zero bend radius, preventing structural cable fatigue. The external high-gain wireless dongle hooks directly into the master USB slot, extending its antenna array through clean top-rail windows to handle external packet sourcing blocks while leaving the interior entirely free of loose wire clutter.
+
+![image](https://stasis.hackclub-assets.com/images/1780096645205-1t6uqx.png)
+---
+
+### 💻 Diagram 3: Distributed Data Bus Topology (Information Flow)
+
+This transaction pipeline diagram tracks the behavioral information flow, packet sequences, and processing distribution paths across the dual-node architecture. It visually demonstrates how physical hardware isolation protects data integrity and guarantees a smooth user experience. The workflow tracks how incoming wireless packets are ingested by the master graphical host node, which handles the core operating system and renders live diagnostic readouts onto the primary touch monitor.
+
+When a user triggers a command on the lower touch panel, the request serializes over a lightweight local network socket across the flat copper data bus line. The secondary display is electronically inverted in the operating system kernel to correct the physical rotation, allowing it to function as a seamless interactive control deck. This data loop ensures that the secondary sandbox processing core compiles all background automation scripts and local databases in complete isolation, maintaining absolute runtime safety and executing automated multi-pass security wipes if network boundaries are compromised.
+
+<img width="472" height="617" alt="image" src="https://github.com/user-attachments/assets/de1c6f59-6739-4238-a998-a39dd05ea37c" />
+
+##  Enclosure Mechanics & Geometric Engineering
 
 The device uses a solid-plate, monolithic tablet chassis with zero moving parts, optimized for FDM 3D printing using SUNLU PLA filament. To resolve layout boundaries, the enclosure footprint has been uniformly scaled by a strict parametric multiplier of **0.1060922** to perfectly match the real-world 85 mm x 56 mm face of standard 3.5-inch touchscreens.
 
@@ -24,20 +49,18 @@ The interior layout organizes all hardware components side-by-side into a dense,
 * **The Central Power Bay:** A custom-dimensioned cavity ($153.3 \text{ mm} \times 71.5 \text{ mm} \times 15.2 \text{ mm}$) captures a 25W QTshine Power Delivery supply lying completely flat against the lower structural deck. A precise rectangular I/O window is cut on the outer long-side wall to provide direct, unhindered charging access from the exterior.
 * **The Stacked Computing Wings:** The compute units are organized into independent left and right compartments. By utilizing an **"Opposed-Node Rotation"** layout, Node 2 is rotated 180 degrees relative to Node 1 within the horizontal frame. This positions their native Ethernet (LAN) jacks facing directly toward the center bulkhead on a flat line.
 * **The Display Faceplates:** Twin CUQI 3.5-inch touchscreen modules clip flush into the top face cutouts. They seat directly onto the physical 40-pin GPIO arrays of their respective single-board computers, siphoning their necessary 5V power natively through the pins without loose cables.
-
 ---
 
-## 🔌 Clean Solderless Wiring & Hardware Bridge
+##  Clean Solderless Wiring & Hardware Bridge
 
 The AI-LearnDeck relies on a 100% plug-and-play constructor layout that completely bypasses hand-soldering:
 
 1. **The Data Bridge:** Because the processing nodes are arranged in an opposed-rotation layout, a standard **15 cm kenable Flat CAT6 Ethernet cable** connects their network jacks across the central bulkhead partition.
 2. **Power Allocation:** The system utilizes **SELIACR Vertical 90-Degree USB-C steering adapters**. These low-profile elbow interconnects redirect the power bank's built-in Type-C Power Delivery lines straight downwards into a below-deck routing corridor, delivering continuous, stable 5V/5A current beneath the mounting plates without wire stretching or hitting the inner casing walls.
 3. **External Wireless Array:** An **xruc 1300Mbps Dual-Antenna WiFi Dongle** plugs directly into a blue USB 3.0 port on Node 1. The high-gain 5dBi external antennas pass cleanly through top-rail structural cutouts to optimize network data throughput.
-
 ---
 
-## 📊 System Engineering Math & Energy Metrics
+##  System Engineering Math & Energy Metrics
 
 * **Mass Budgeting (Ergonomics):**
   $$\text{2x Raspberry Pi 5 (92g)} + \text{2x 3.5" LCD (100g)} + \text{QTshine Power Bank (280g)} + \text{PLA Filament (200g)} \approx \mathbf{472\text{ grams.}}$$
@@ -57,7 +80,7 @@ The AI-LearnDeck relies on a 100% plug-and-play constructor layout that complete
 
 ---
 
-## 🛡️ Network Isolation & Secure-Purge Protection System
+##  Network Isolation & Secure-Purge Protection System
 
 To teach students the core principles of defensive network topology and military-grade data sterilization, the custom learning architecture implements an automated protective sequence:
 
