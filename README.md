@@ -1,5 +1,79 @@
-# AI-LearnDeck
-AI-LearnDeck is a dual-screen portable hardware platform designed for interactive computer science education and network lab automation. 
+# AI-LearnDeck: The Distributed Classroom Sandbox
+
+AI-LearnDeck is an educational, portable dual-screen hardware laboratory designed to make exploring distributed networking, operating system management, and automated scripting completely engaging and safe for students. 
+
+Instead of forcing students to use slow virtual machines that crash or lag a single main computer, this device physically splits the student-machine interface across two hardware boundaries to ensure a 0% user-interface lag environment during complex computer science lessons.
+
+---
+
+## 📖 The Story & Philosophy: Why I Built This
+
+When learning server administration or network routing, students often face a wall of frustrating textbook theory. Running heavy educational scripts on a single micro-computer quickly bottlenecks the CPU, causing screen freezing and system crashes that disrupt the classroom flow. 
+
+I built the **AI-LearnDeck** to turn distributed computing into a tactile, physical experience. By decoupling the interface from the backend learning environment, a student can visually monitor real-time diagnostic packets on the top monitor while actively writing and interacting with custom coding tools on the lower touch panel. It is a miniature, fully independent data center that fits entirely in a backpack, built to teach how real-world cluster infrastructure handles resource scaling.
+
+---
+
+## 📐 Enclosure Mechanics & Geometric Engineering
+
+The device uses a solid-plate, monolithic tablet chassis with zero moving parts, optimized for FDM 3D printing using SUNLU PLA filament. To resolve layout boundaries, the enclosure footprint has been uniformly scaled by a strict parametric multiplier of **0.1060922** to perfectly match the real-world 85 mm x 56 mm face of standard 3.5-inch touchscreens.
+
+### Internal Space Budgeting (Layer-by-Layer Stacking):
+The interior layout organizes all hardware components side-by-side into a dense, modular constructor ecosystem that entirely avoids loose wire clutter:
+
+* **The Central Power Bay:** A custom-dimensioned cavity ($153.3 \text{ mm} \times 71.5 \text{ mm} \times 15.2 \text{ mm}$) captures a 25W QTshine Power Delivery supply lying completely flat against the lower structural deck. A precise rectangular I/O window is cut on the outer long-side wall to provide direct, unhindered charging access from the exterior.
+* **The Stacked Computing Wings:** The compute units are organized into independent left and right compartments. By utilizing an **"Opposed-Node Rotation"** layout, Node 2 is rotated 180 degrees relative to Node 1 within the horizontal frame. This positions their native Ethernet (LAN) jacks facing directly toward the center bulkhead on a flat line.
+* **The Display Faceplates:** Twin CUQI 3.5-inch touchscreen modules clip flush into the top face cutouts. They seat directly onto the physical 40-pin GPIO arrays of their respective single-board computers, siphoning their necessary 5V power natively through the pins without loose cables.
+
+---
+
+## 🔌 Clean Solderless Wiring & Hardware Bridge
+
+The AI-LearnDeck relies on a 100% plug-and-play constructor layout that completely bypasses hand-soldering:
+
+1. **The Data Bridge:** Because the processing nodes are arranged in an opposed-rotation layout, a standard **15 cm kenable Flat CAT6 Ethernet cable** connects their network jacks across the central bulkhead partition.
+2. **Power Allocation:** The system utilizes **SELIACR Vertical 90-Degree USB-C steering adapters**. These low-profile elbow interconnects redirect the power bank's built-in Type-C Power Delivery lines straight downwards into a below-deck routing corridor, delivering continuous, stable 5V/5A current beneath the mounting plates without wire stretching or hitting the inner casing walls.
+3. **External Wireless Array:** An **xruc 1300Mbps Dual-Antenna WiFi Dongle** plugs directly into a blue USB 3.0 port on Node 1. The high-gain 5dBi external antennas pass cleanly through top-rail structural cutouts to optimize network data throughput.
+
+---
+
+## 📊 System Engineering Math & Energy Metrics
+
+* **Mass Budgeting (Ergonomics):**
+  $$\text{2x Raspberry Pi 5 (92g)} + \text{2x 3.5" LCD (100g)} + \text{QTshine Power Bank (280g)} + \text{PLA Filament (200g)} \approx \mathbf{472\text{ grams.}}$$
+  *The total weight sits below half a kilogram, making it highly portable for student labs.*
+
+* **Power Draw & Battery Lifecycle:**
+  At a peak computation draw of approximately 4.0 Amps per hour with localized scripts running simultaneously, the integrated **10,800mAh (10.8 Ah)** power bank provides an active lifecycle curve:
+  $$\text{Runtime (Peak load)} = \frac{10.8\text{ Ah}}{4.0\text{ A}} \approx \mathbf{2.7\text{ Hours}}$$
+  $$\text{Runtime (Standard idle)} = \frac{10.8\text{ Ah}}{1.5\text{ A}} \approx \mathbf{7.2\text{ Hours}}$$
+
+* **Software Display Rotation:**
+  To correct the inverted image on the secondary display caused by the 180-degree physical hardware rotation, a parametric compensation rule is injected into the Linux boot sequence file (`/boot/firmware/config.txt`):
+  ```bash
+  display_hdmi_rotate=2
+  ```
+  This flips the rendering pipeline electronically by 180 degrees, keeping both touch interfaces reading uniformly left-to-right.
+
+---
+
+## 🛡️ Network Isolation & Secure-Purge Protection System
+
+To teach students the core principles of defensive network topology and military-grade data sterilization, the custom learning architecture implements an automated protective sequence:
+
+* **Phase 1: Instant Hardware Isolation (Cut-Off):** 
+  If an anomalous threat signature or unauthorized network packet is flagged by the background monitoring system, Node 1 instantly issues an isolation command:
+  ```bash
+  sudo ifconfig eth0 down
+  ```
+  This software command drops the wired kenable CAT6 hardware bridge immediately, completely isolating the computational environment on Node 2 and protecting the lab data from external network vectors.
+* **Phase 2: Secure Wipe Multi-Pass Routine (Shred):**
+  If the breach parameter persists or mechanical case tampering is detected, Node 2 immediately executes a low-level data purge command across its 128GB high-speed MicroSD storage drive to prevent unauthorized extraction:
+  ```bash
+  shred -uvz -n 3 /home/pi/ai_core/data_bytes/*
+  ```
+  This forces the system to overwrite all critical educational database sectors, binary blocks, and custom code modules **3 consecutive times** with randomized bit pattern sets before performing a permanent physical deletion, guaranteeing that the files cannot be recovered by forensic tools.
+
 ### Bill of Materials (BOM)
 
 
