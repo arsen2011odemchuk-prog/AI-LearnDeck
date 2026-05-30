@@ -1,0 +1,26 @@
+{
+  "node_name": "EduCluster-2X Host",
+  "core_host": "192.168.50.2",
+  "core_port": 5050,
+  "top_screen": {
+    "x": 0,
+    "y": 0,
+    "width": 480,
+    "height": 320
+  },
+  "bottom_screen": {
+    "x": 0,
+    "y": 320,
+    "width": 480,
+    "height": 320
+  },
+  "theme": {
+    "accent": "#38bdf8",
+    "success": "#22c55e",
+    "warning": "#f59e0b",
+    "danger": "#ef4444",
+    "background": "#07111f",
+    "panel": "#0f172a",
+    "text": "#e5edf7"
+  }
+}
